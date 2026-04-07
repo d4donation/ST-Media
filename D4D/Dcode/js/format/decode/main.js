@@ -80,35 +80,35 @@ self.addEventListener('message', function(e) {
         }
     } else if (packer === 'aaencode') {
         try {
-            self.importScripts('/aadecode.js');
+            self.importScripts('https://cdn.jsdelivr.net/gh/d4donation/ST-Media@main/D4D/Dcode/js/format/decode/aadecode.js');
             source = AADecode.decode(source);
         } catch (err) {
             console.log(err);
         }
     } else if (packer === 'jjencode') {
         try {
-            self.importScripts('/jjdecode.js');
+            self.importScripts('https://cdn.jsdelivr.net/gh/d4donation/ST-Media@main/D4D/Dcode/js/format/decode/jjdecode.js');
             source = JJdecode.decode(source);
         } catch (err) {
             console.log(err);
         }
     } else if (packer === 'urlencode') {
         try {
-            self.importScripts('/urlencode_unpacker.js');
+            self.importScripts('https://cdn.jsdelivr.net/gh/d4donation/ST-Media@main/D4D/Dcode/js/format/decode/urlencode_unpacker.js');
             if (Urlencoded.detect(source)) source = Urlencoded.unpack(source);
         } catch (err) {
             console.log(err);
         }
     } else if (packer === 'p_a_c_k_e_r') {
         try {
-            self.importScripts('/p_a_c_k_e_r_unpacker.js');
+            self.importScripts('https://cdn.jsdelivr.net/gh/d4donation/ST-Media@main/D4D/Dcode/js/format/decode/p_a_c_k_e_r_unpacker.js');
             if (P_A_C_K_E_R.detect(source)) source = P_A_C_K_E_R.unpack(source);
         } catch (err) {
             console.log(err);
         }
     } else if (packer === 'javascriptobfuscator') {
         try {
-            self.importScripts('/javascriptobfuscator_unpacker.js');
+            self.importScripts('https://cdn.jsdelivr.net/gh/d4donation/ST-Media@main/D4D/Dcode/js/format/decode/javascriptobfuscator_unpacker.js');
             if (JavascriptObfuscator.detect(source)) source = JavascriptObfuscator.unpack(source);
         } catch (err) {
             console.log(err);
