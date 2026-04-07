@@ -144,7 +144,7 @@
                 return;
             }
             if (!workerDecode) {
-                workerDecode = createWorker('https://cdn.jsdelivr.net/gh/d4donation/ST-Media@main/D4D/Dcode/js/format/decode/main.js');
+                workerDecode = createWorker('https://cdn.jsdelivr.net/gh/d4donation/ST-Media@main/D4D/Dcode/js/DMain.js');
                 workerDecode.addEventListener('message', function(e) {
                     output.value = e.data;
                     if (auto.checked && input.value !== output.value) {
