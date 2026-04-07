@@ -97,7 +97,7 @@
             var source = output.value.trim();
             if (source === '') return;
             if (!workerFormat) {
-                workerFormat = createWorker('https://cdn.leanhduc.pro.vn/blogger/decode/js/format/main.js');
+                workerFormat = createWorker('https://cdn.jsdelivr.net/gh/d4donation/ST-Media@main/D4D/Dcode/js/format/main.js');
                 workerFormat.addEventListener('message', function(e) {
                     view.innerHTML = e.data;
                     externalPreview(e.data);
@@ -144,7 +144,7 @@
                 return;
             }
             if (!workerDecode) {
-                workerDecode = createWorker('https://cdn.leanhduc.pro.vn/blogger/decode/js/decode/main.js');
+                workerDecode = createWorker('https://cdn.jsdelivr.net/gh/d4donation/ST-Media@main/D4D/Dcode/js/format/decode/main.js');
                 workerDecode.addEventListener('message', function(e) {
                     output.value = e.data;
                     if (auto.checked && input.value !== output.value) {
