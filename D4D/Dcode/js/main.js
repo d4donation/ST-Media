@@ -101,7 +101,7 @@
                 workerFormat.addEventListener('message', function(e) {
                     view.innerHTML = e.data;
                     externalPreview(e.data);
-                    stopEffect();
+                    stopEffect();;
                 });
             }
             startEffect();
